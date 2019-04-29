@@ -1,0 +1,27 @@
+{
+  "name": "quickcreditapi",
+  "version": "1.0.0",
+  "description": "andela developer bootcamp project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mumbere7/quickCreditApi.git"
+  },
+  "author": "mumbere7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mumbere7/quickCreditApi/issues"
+  },
+  "homepage": "https://github.com/Mumbere7/quickCreditApi#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
