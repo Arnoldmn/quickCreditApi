@@ -21,6 +21,7 @@ const User = db.model('User', new db.Schema({
     password: {
         type: String,
         required: true,
+        minLength: 6
     },
     address: {
         type: String,
@@ -34,7 +35,21 @@ const User = db.model('User', new db.Schema({
         reqiured: true
     }
 
-
-
 }));
 
+function validateUser(user) {
+    const schema = {
+        email: db.String().min(6).max(50).required(),
+        firstName: db.String().min(6).max(50).required(),
+        lastName: db.String().min(6).max(50).required(),
+        password: db.String().min(6).max(50).required(),
+        address: db.String().min(6).max(50).required(),
+        status: db.String().min(6).max(50).reqiured(),
+        isAdmin: db.boolean().reqiured()
+    }
+
+    return db.validate(user, schema);
+}
+
+exports.User = User;
+exports.validate = validateUser 
